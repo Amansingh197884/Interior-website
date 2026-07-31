@@ -37,7 +37,7 @@ const Contact = () => {
     setStatus('Submitting...');
 
     // Google Sheets Web App URL Yahan Paste Karein
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwP75h-sqLl2EVoiVgaoK4s6uuoyS287YgAcI65PI-f84s8WuOd4Lp7jJS14g7SiIVuIA/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwupfrpt_DTkRaQmussqghRcLK8YS-aIwzacsEkDNP8HVq9fJzJUaMsj2mmEmNml4Y1Zw/exec';
 
     try {
       const formPayload = new URLSearchParams();
