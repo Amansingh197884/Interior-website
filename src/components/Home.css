@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@200;300;400&display=swap');
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #12100f;
+  color: #e5e0d8;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 60px;
+}
+
+/* Background Image Effects */
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65) contrast(1.05);
+  animation: slowZoom 20s infinite alternate ease-in-out;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg, 
+    rgba(18, 16, 15, 0.4) 0%, 
+    rgba(18, 16, 15, 0.2) 50%, 
+    rgba(18, 16, 15, 0.7) 100%
+  );
+}
+
+/* Main Hero Layout */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  height: calc(100vh - 80px);
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10vh;
+  padding-bottom: 8vh;
+  box-sizing: border-box;
+}
+
+/* Title Styling with Animation */
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(3.5rem, 9vw, 9.5rem);
+  font-weight: 400;
+  margin: 0;
+  line-height: 0.95;
+  letter-spacing: -1px;
+  color: #f3efe6;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-title span {
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #c2bcb0;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  animation: fadeInUp 1.2s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Circular Floating Explore Button */
+.explore-circle {
+  align-self: flex-end;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 224, 216, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: rgba(18, 16, 15, 0.2);
+  backdrop-filter: blur(4px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: fadeInUp 1.2s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.explore-circle:hover {
+  border-color: rgba(229, 224, 216, 0.8);
+  transform: scale(1.08);
+  background: rgba(18, 16, 15, 0.4);
+}
+
+.circle-text {
+  color: #e5e0d8;
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  padding: 0 15px;
+}
+
+.circle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotateCircle 20s linear infinite;
+}
+
+.circle-svg path {
+  fill: none;
+}
+
+.circle-svg text {
+  fill: rgba(229, 224, 216, 0.6);
+  font-size: 8.5px;
+  letter-spacing: 2.2px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 0 1.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    letter-spacing: 1px;
+  }
+
+  .explore-circle {
+    align-self: center;
+    width: 140px;
+    height: 140px;
+  }
+
+  .circle-text {
+    font-size: 0.75rem;
+  }
+}
