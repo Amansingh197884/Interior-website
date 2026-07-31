@@ -5,11 +5,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(18, 16, 15, 0.75);
+  background-color: #FbF7ec;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
@@ -28,17 +28,21 @@
   gap: 12px;
   text-decoration: none;
 }
-.navbar-brand img{
-    width: 150px !important;
-  height: 50px !important;
-}
 
+/* Exact #3e4d40 Color for Logo SVG */
 .logo-icon {
-
-  filter: brightness(0) invert(0.9);
+  width: 150px;
+  height: 50px;
+  background-color: #3e4d40;
+  
+  /* Masking properties */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center left;
+  mask-position: center left;
 }
-
-
 
 /* Links List */
 .nav-menu {
@@ -52,7 +56,7 @@
 
 .nav-link {
   font-family: 'Montserrat', sans-serif;
-  color: #A39E93 !important;
+  color: #3e4d40 !important;
   text-decoration: none !important;
   font-size: 0.85rem;
   font-weight: 300;
@@ -64,7 +68,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: #E5E0D8 !important;
+  color: #3e4d40 !important;
 }
 
 .nav-link.active::after {
@@ -74,7 +78,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #E5E0D8;
+  background-color: #3e4d40;
 }
 
 /* Right Section - Log In */
@@ -88,7 +92,7 @@
   align-items: center;
   gap: 8px;
   font-family: 'Montserrat', sans-serif;
-  color: #E5E0D8;
+  color: #3e4d40;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 400;
@@ -102,12 +106,12 @@
 .user-icon {
   width: 20px;
   height: 20px;
-  fill: #E5E0D8;
+  fill: #3e4d40;
 }
 
 /* Responsive Handling */
 @media (max-width: 992px) {
   .nav-menu {
-    display: none; /* Mobile menu styling can be toggled if needed */
+    display: none;
   }
 }

@@ -7,7 +7,13 @@ const Navbar = () => {
       <div className="nav-container">
         {/* Brand / Logo Section */}
         <a href="#home" className="navbar-brand">
-          <img src={logoSvg} alt="Aura Boutique Logo" className="logo-icon" />
+          <div 
+            className="logo-icon"
+            style={{
+              WebkitMaskImage: `url(${logoSvg})`,
+              maskImage: `url(${logoSvg})`
+            }}
+          />
         </a>
 
         {/* Navigation Links */}

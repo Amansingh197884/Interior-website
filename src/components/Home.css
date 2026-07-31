@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@200;300;400;500&display=swap');
 
 .hero-section {
   position: relative;
@@ -14,7 +14,6 @@
   padding-top: 60px;
 }
 
-/* Background Image Effects */
 .hero-bg-wrapper {
   position: absolute;
   top: 0;
@@ -52,20 +51,24 @@
   z-index: 2;
   width: 100%;
   max-width: 1400px;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   padding: 0 3rem;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  padding-top: 10vh;
+  align-items: flex-end;
+  padding-top: 8vh;
   padding-bottom: 8vh;
   box-sizing: border-box;
+}
+
+.hero-text-content {
+  max-width: 850px;
 }
 
 /* Title Styling with Animation */
 .hero-title {
   font-family: 'Cinzel', serif;
-  font-size: clamp(3.5rem, 9vw, 9.5rem);
+  font-size: clamp(3.5rem, 8vw, 8.5rem);
   font-weight: 400;
   margin: 0;
   line-height: 0.95;
@@ -84,108 +87,176 @@
   font-weight: 300;
   letter-spacing: 2px;
   color: #c2bcb0;
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
   text-transform: uppercase;
   animation: fadeInUp 1.2s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+/* Holistic Green Card (Aura Boutique ke niche) */
+/* Glassy Look Holistic Green Card */
+.hero-green-card {
+  margin-top: 2rem;
+  max-width: 440px;
+  
+  /* Frosted Glass Base Colors & Blur */
+  background: rgba(245, 243, 238, 0.65); /* Soft cream translucency */
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  
+  /* Glass Borders and Shadows */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  
+  padding: 2.2rem;
+  animation: fadeInUp 1.2s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-green-card .card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 59px;
+  font-weight: 500;
+  color: #3e4d40; /* Natural muted green heading */
+  margin: 0 0 1rem 0;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.hero-green-card .card-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #4a544c;
+  margin: 0 0 1.5rem 0;
+  font-weight: 400;
+}
+
+.hero-green-card .card-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #4b5a4d; /* Matching green button */
+  color: #f7f6f2;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-weight: 400;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.hero-green-card .card-btn:hover {
+  background-color: #38453a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
 /* Circular Floating Explore Button */
+/* Circular Floating Explore Button Container */
 .explore-circle {
   align-self: flex-end;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  border: 1px solid rgba(229, 224, 216, 0.3);
+  border: 1px solid rgba(62, 77, 64, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: rgba(18, 16, 15, 0.2);
-  backdrop-filter: blur(4px);
+  background: rgba(62, 77, 64, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  animation: fadeInUp 1.2s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: fadeInUp 1.2s 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .explore-circle:hover {
-  border-color: rgba(229, 224, 216, 0.8);
+  border-color: #3e4d40;
   transform: scale(1.08);
-  background: rgba(18, 16, 15, 0.4);
+  background: rgba(62, 77, 64, 0.35);
+  box-shadow: 0 15px 30px rgba(62, 77, 64, 0.3);
 }
 
-.circle-text {
-  color: #e5e0d8;
-  font-size: 0.75rem;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 0.5px;
-  z-index: 2;
-  padding: 0 15px;
-}
-
+/* Fixed Rotation Animation on SVG */
 .circle-svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  animation: rotateCircle 20s linear infinite;
-}
-
-.circle-svg path {
-  fill: none;
+  transform-origin: center center;
+  animation: rotateCircle 18s linear infinite !important;
 }
 
 .circle-svg text {
-  fill: rgba(229, 224, 216, 0.6);
-  font-size: 8.5px;
+  fill: #c2bcb0;
+  font-size: 8.2px;
   letter-spacing: 2.2px;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+  transition: fill 0.3s ease;
 }
 
-/* Keyframe Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.explore-circle:hover .circle-svg text {
+  fill: #f3efe6;
 }
 
-@keyframes slowZoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.08);
-  }
+/* Center SVG Icon Styling */
+.circle-icon {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3efe6;
+  transition: transform 0.4s ease, color 0.3s ease;
 }
 
+.circle-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.explore-circle:hover .circle-icon {
+  transform: translate(2px, -2px); /* Hover par arrow subtle shift hoga */
+  color: #ffffff;
+}
+
+/* Rotation Keyframes */
 @keyframes rotateCircle {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
-
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero-container {
-    padding: 0 1.5rem;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 3rem;
     text-align: center;
+  }
+
+  .hero-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-subtitle {
     letter-spacing: 1px;
+  }
+
+  .hero-green-card {
+    text-align: left;
   }
 
   .explore-circle {

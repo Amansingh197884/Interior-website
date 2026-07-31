@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+
+.custom-footer {
+  width: 100%;
+  background-color: #f5f4ee;
+  padding: 5rem 3rem 2.5rem;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: #3e4d40;
+  border-top: 1px solid rgba(62, 77, 64, 0.15);
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-icon {
+  width: 200px;
+  height: 100px;
+  background-color: #3e4d40;
+  
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.brand-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #3e4d40;
+  letter-spacing: 0.5px;
+}
+
+.column-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3e4d40;
+  margin: 0 0 1.2rem 0;
+}
+
+.column-text {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #5d6b5f;
+  font-weight: 300;
+  margin: 0;
+}
+
+.column-text a {
+  color: #5d6b5f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.column-text a:hover {
+  color: #3e4d40;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.social-links a {
+  font-size: 0.88rem;
+  color: #5d6b5f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #3e4d40;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(62, 77, 64, 0.15);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.legal-links {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.legal-links a {
+  font-size: 0.82rem;
+  color: #3e4d40;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
+}
+
+.legal-links a:hover {
+  opacity: 0.7;
+}
+
+.copyright-text {
+  font-size: 0.8rem;
+  color: #6c786e;
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .custom-footer {
+    padding: 3.5rem 1.5rem 2rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

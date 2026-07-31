@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+
+.about-section {
+  width: 100%;
+  background-color: #f5f4ee; /* Same warm beige background from screenshot */
+  padding: 6rem 3rem;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Heading Styling matching image */
+.about-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(3rem, 5.5vw, 5rem);
+  font-weight: 400;
+  color: #3e4d40; /* Theme Sage Green Color */
+  line-height: 1.05;
+  margin: 0 0 4rem 0;
+  letter-spacing: -1px;
+}
+
+/* Grid Layout */
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Image Wrapper */
+.about-image-wrapper {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.about-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right Side Text Content */
+.about-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+
+.about-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #3e4d40; /* Soft green-gray dark text */
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* Explore Now Button matching image */
+.about-btn {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  background-color: #3e4d40; /* Matching green button */
+  color: #f5f4ee;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(62, 77, 64, 0.15);
+}
+
+.about-btn:hover {
+  background-color: #2c382e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(62, 77, 64, 0.25);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .about-content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-text-wrapper {
+    padding-left: 0;
+  }
+
+  .about-image {
+    height: 380px;
+  }
+
+  .about-title {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-image {
+    height: 280px;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+  }
+}

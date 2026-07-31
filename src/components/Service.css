@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+
+.services-section {
+  width: 100%;
+  background-color: #f5f4ee; 
+  padding: 6rem 3rem 8rem;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: #3e4d40;
+}
+
+.services-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.services-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(3rem, 5.5vw, 5rem);
+  font-weight: 400;
+  color: #3e4d40;
+  line-height: 1.05;
+  margin: 0 0 3.5rem 0;
+  letter-spacing: -1px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(62, 77, 64, 0.2);
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 140px;
+  align-items: center;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid rgba(62, 77, 64, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.service-row:hover {
+  background-color: rgba(62, 77, 64, 0.03);
+}
+
+/* Service Title */
+.service-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #3e4d40;
+  letter-spacing: 0.2px;
+}
+
+.service-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.service-duration {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #5a665c;
+}
+
+.service-price {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #3e4d40;
+}
+
+.service-book-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.55rem 1.2rem;
+  border: 1px solid #3e4d40; 
+  background: transparent;
+  color: #3e4d40;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.service-book-btn:hover {
+  background-color: #3e4d40;
+  color: #f5f4ee;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(62, 77, 64, 0.15);
+}
+
+@media (max-width: 768px) {
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .service-book-btn {
+    align-self: flex-start;
+    width: fit-content;
+  }
+}
