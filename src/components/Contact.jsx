@@ -36,7 +36,8 @@ const Contact = () => {
     setIsSubmitting(true);
     setStatus('Submitting...');
 
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwupfrpt_DTkRaQmussqghRcLK8YS-aIwzacsEkDNP8HVq9fJzJUaMsj2mmEmNml4Y1Zw/exec';
+    // Google Sheets Web App URL Yahan Paste Karein
+    const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
 
     try {
       const formPayload = new URLSearchParams();
@@ -44,7 +45,10 @@ const Contact = () => {
       formPayload.append('lastName', formData.lastName);
       formPayload.append('email', formData.email);
       
-      formPayload.append('phone', `'${formData.countryCode} ${formData.phone}`);
+      // '+' sign ko yahan replace kar diya hai taaki Google Sheet me Formula Error (#ERROR!) na aaye
+      const cleanCountryCode = formData.countryCode.replace('+', '');
+      formPayload.append('phone', `${cleanCountryCode} ${formData.phone}`);
+      
       formPayload.append('message', formData.message);
 
       await fetch(GOOGLE_SCRIPT_URL, {
