@@ -36,7 +36,7 @@ const Contact = () => {
     setIsSubmitting(true);
     setStatus('Submitting...');
 
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwupfrpt_DTkRaQmussqghRcLK8YS-aIwzacsEkDNP8HVq9fJzJUaMsj2mmEmNml4Y1Zw/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzoc9ApBazmBc19Pr8JWaiKxip4aJM8y6GBMmAMbGkesG-a9YIh71rvmJ4EE4zpwzjl/exec';
 
     try {
       const formPayload = new URLSearchParams();
