@@ -36,8 +36,7 @@ const Contact = () => {
     setIsSubmitting(true);
     setStatus('Submitting...');
 
-    // Google Sheets Web App URL paste karein
-    const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxqNX2aA79Ijv9g8zxL5TmP_b8BrSs3-uo2SRsZOFCmQ_R6XNlFvaKpbkobnt84ZxbXzg/exec';
 
     try {
       const formPayload = new URLSearchParams();
@@ -73,7 +72,6 @@ const Contact = () => {
     }
   };
 
-  // Currently selected country ka ISO code nikalne ke liye
   const selectedCountry = countries.find((c) => c.code === formData.countryCode) || countries[0];
 
   return (
