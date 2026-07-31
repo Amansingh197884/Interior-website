@@ -36,7 +36,7 @@ const Contact = () => {
     setIsSubmitting(true);
     setStatus('Submitting...');
 
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxqNX2aA79Ijv9g8zxL5TmP_b8BrSs3-uo2SRsZOFCmQ_R6XNlFvaKpbkobnt84ZxbXzg/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9KckBalcytCvWKZOxegwgyDDIIDBnljLATLHnkOXyWu7xsZO732hYH9FwuYB3gfVh0w/exec';
 
     try {
       const formPayload = new URLSearchParams();
@@ -72,6 +72,7 @@ const Contact = () => {
     }
   };
 
+  // Currently selected country ka ISO code nikalne ke liye
   const selectedCountry = countries.find((c) => c.code === formData.countryCode) || countries[0];
 
   return (
