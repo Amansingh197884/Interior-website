@@ -36,14 +36,17 @@ const Contact = () => {
     setIsSubmitting(true);
     setStatus('Submitting...');
 
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9KckBalcytCvWKZOxegwgyDDIIDBnljLATLHnkOXyWu7xsZO732hYH9FwuYB3gfVh0w/exec';
+    // Google Sheets Web App URL Yahan Paste Karein
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwP75h-sqLl2EVoiVgaoK4s6uuoyS287YgAcI65PI-f84s8WuOd4Lp7jJS14g7SiIVuIA/exec';
 
     try {
       const formPayload = new URLSearchParams();
       formPayload.append('firstName', formData.firstName);
       formPayload.append('lastName', formData.lastName);
       formPayload.append('email', formData.email);
-      formPayload.append('phone', `${formData.countryCode} ${formData.phone}`);
+      
+      // Single quote (') add kar diya hai taaki Google Sheet ise formula (#ERROR!) na samjhe
+      formPayload.append('phone', `'${formData.countryCode} ${formData.phone}`);
       formPayload.append('message', formData.message);
 
       await fetch(GOOGLE_SCRIPT_URL, {
@@ -72,7 +75,6 @@ const Contact = () => {
     }
   };
 
-  // Currently selected country ka ISO code nikalne ke liye
   const selectedCountry = countries.find((c) => c.code === formData.countryCode) || countries[0];
 
   return (
@@ -129,7 +131,7 @@ const Contact = () => {
                 <label>Phone</label>
                 <div className="phone-field-box">
                   
-                  {/* Flag Icon + Globe + Arrow Dropdown */}
+                  {/* Flag Icon + Arrow Dropdown */}
                   <div className="country-selector">
                     <img 
                       src={`https://flagcdn.com/w20/${selectedCountry.iso}.png`} 
@@ -141,7 +143,6 @@ const Contact = () => {
                       <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
 
-                    {/* Invisible Dropdown Selector */}
                     <select
                       name="countryCode"
                       value={formData.countryCode}
@@ -191,7 +192,7 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Right Ceramic Pots Image */}
+        {/* Right Image */}
         <div className="contact-image-wrapper">
           <img
             src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1000&auto=format&fit=crop"
