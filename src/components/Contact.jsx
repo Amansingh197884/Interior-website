@@ -36,7 +36,6 @@ const Contact = () => {
     setIsSubmitting(true);
     setStatus('Submitting...');
 
-    // Google Sheets Web App URL Yahan Paste Karein
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwupfrpt_DTkRaQmussqghRcLK8YS-aIwzacsEkDNP8HVq9fJzJUaMsj2mmEmNml4Y1Zw/exec';
 
     try {
@@ -45,7 +44,6 @@ const Contact = () => {
       formPayload.append('lastName', formData.lastName);
       formPayload.append('email', formData.email);
       
-      // Single quote (') add kar diya hai taaki Google Sheet ise formula (#ERROR!) na samjhe
       formPayload.append('phone', `'${formData.countryCode} ${formData.phone}`);
       formPayload.append('message', formData.message);
 
