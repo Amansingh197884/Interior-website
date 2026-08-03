@@ -45,13 +45,12 @@
   );
 }
 
-/* Main Hero Layout */
 .hero-container {
   position: relative;
   z-index: 2;
   width: 100%;
   max-width: 1400px;
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   padding: 0 3rem;
   display: flex;
   justify-content: space-between;
@@ -91,19 +90,16 @@
   text-transform: uppercase;
   animation: fadeInUp 1.2s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+/* card  */
 
-/* Holistic Green Card (Aura Boutique ke niche) */
-/* Glassy Look Holistic Green Card */
 .hero-green-card {
   margin-top: 2rem;
   max-width: 440px;
   
-  /* Frosted Glass Base Colors & Blur */
-  background: rgba(245, 243, 238, 0.65); /* Soft cream translucency */
+  background: rgba(245, 243, 238, 0.65);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   
-  /* Glass Borders and Shadows */
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -119,7 +115,7 @@
   font-family: 'Cinzel', serif;
   font-size: 59px;
   font-weight: 500;
-  color: #3e4d40; /* Natural muted green heading */
+  color: #3e4d40; 
   margin: 0 0 1rem 0;
   line-height: 1.15;
   letter-spacing: -0.5px;
@@ -137,7 +133,7 @@
 .hero-green-card .card-btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #4b5a4d; /* Matching green button */
+  background-color: #4b5a4d;
   color: #f7f6f2;
   text-decoration: none;
   font-size: 0.75rem;
@@ -154,8 +150,7 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
-/* Circular Floating Explore Button */
-/* Circular Floating Explore Button Container */
+
 .explore-circle {
   align-self: flex-end;
   position: relative;
@@ -182,7 +177,6 @@
   box-shadow: 0 15px 30px rgba(62, 77, 64, 0.3);
 }
 
-/* Fixed Rotation Animation on SVG */
 .circle-svg {
   position: absolute;
   top: 0;
@@ -206,7 +200,6 @@
   fill: #f3efe6;
 }
 
-/* Center SVG Icon Styling */
 .circle-icon {
   z-index: 2;
   display: flex;
@@ -222,11 +215,10 @@
 }
 
 .explore-circle:hover .circle-icon {
-  transform: translate(2px, -2px); /* Hover par arrow subtle shift hoga */
+  transform: translate(2px, -2px);
   color: #ffffff;
 }
 
-/* Rotation Keyframes */
 @keyframes rotateCircle {
   0% {
     transform: rotate(0deg);
@@ -235,7 +227,6 @@
     transform: rotate(360deg);
   }
 }
-/* Responsive Styles */
 @media (max-width: 900px) {
   .hero-container {
     flex-direction: column;
@@ -268,4 +259,13 @@
   .circle-text {
     font-size: 0.75rem;
   }
+  .hero-container {
+ 
+  padding: 0 0.3rem;
+  display: flex;
+
+  padding-top: 0vh;
+  padding-bottom: 1vh;
+  box-sizing: border-box;
+}
 }

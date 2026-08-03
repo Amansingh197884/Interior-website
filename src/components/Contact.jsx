@@ -193,8 +193,8 @@ const Contact = () => {
         {/* Right Image */}
         <div className="contact-image-wrapper">
           <img
-            src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1000&auto=format&fit=crop"
-            alt="Rustic Ceramic Pots and Plants"
+            src="https://i.pinimg.com/736x/fd/5d/e0/fd5de0d6c60c1e6743aba54c6859d58c.jpg"
+            alt=""
             className="contact-image"
           />
         </div>

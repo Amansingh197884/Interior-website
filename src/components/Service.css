@@ -103,4 +103,10 @@
     align-self: flex-start;
     width: fit-content;
   }
+  .services-section {
+
+    padding: 6rem 0.7rem 8rem;
+    box-sizing: border-box;
+ 
+}
 }
