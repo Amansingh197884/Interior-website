@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* Main Page Theme Base */
+.contact-page-container {
+  width: 100%;
+  background-color: #FbF7ec;
+  color: #2c382e;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+/* 1. Hero Section Styling */
+.contact-hero-section {
+  width: 100%;
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(44, 56, 46, 0.06) 0%, rgba(251, 247, 236, 1) 100%);
+  border-bottom: 1px solid rgba(44, 56, 46, 0.08);
+}
+
+.contact-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-badge-btn {
+  background: rgba(212, 175, 55, 0.1);
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2c382e;
+  border: 1px solid #c5a059;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-badge-btn:hover {
+  background-color: #2c382e;
+  color: #FbF7ec;
+  border-color: #2c382e;
+}
+
+.section-mini-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5d6b5f;
+  border: 1px solid rgba(44, 56, 46, 0.25);
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contact-hero-content h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+  font-weight: 500;
+  color: #2c382e;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.contact-hero-content p, .section-desc {
+  font-size: 0.95rem;
+  color: #5d6b5f;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* 2. Main Form Wrapper */
+.main-form-section-wrapper {
+  padding: 4rem 1.5rem;
+}
+
+.form-section-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-section-header h2, .location-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 500;
+  color: #2c382e;
+}
+
+/* 3. LUXURY LOCATION & MAP SECTION */
+.location-map-section {
+  position: relative;
+  padding: 6rem 2rem 7rem;
+  background-color: #242f26; /* Emerald Theme Background */
+  color: #f3efe6;
+  overflow: hidden;
+}
+
+.location-bg-accent {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, rgba(36, 47, 38, 0) 70%);
+  pointer-events: none;
+}
+
+.location-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.location-header {
+  margin-bottom: 3.5rem;
+}
+
+.section-gold-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c5a059;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.location-header h2 {
+  color: #ffffff !important;
+  margin-bottom: 0.8rem;
+}
+
+.location-header .section-desc {
+  color: rgba(243, 239, 230, 0.75);
+}
+
+.map-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* Glassmorphism Info Card */
+.location-info-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  border-radius: 12px;
+  padding: 2.5rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card-top-decor {
+  margin-bottom: 1.2rem;
+}
+
+.studio-pill {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  background: rgba(197, 160, 89, 0.2);
+  color: #d4af37;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.location-info-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+/* SVG Lucide Icon Styling */
+.lucide-icon {
+  width: 18px;
+  height: 18px;
+  color: #c5a059;
+  flex-shrink: 0;
+}
+
+.lucide-mini-icon {
+  width: 14px;
+  height: 14px;
+  color: rgba(197, 160, 89, 0.8);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.pin-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+
+.address-text {
+  font-size: 0.92rem;
+  color: rgba(243, 239, 230, 0.85);
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.info-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(197, 160, 89, 0.4) 0%, rgba(255, 255, 255, 0.05) 100%);
+  margin-bottom: 1.5rem;
+}
+
+.info-flex-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.6rem;
+}
+
+.info-title strong {
+  font-size: 0.85rem;
+  color: #c5a059;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.info-block p {
+  font-size: 0.85rem;
+  color: rgba(243, 239, 230, 0.8);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.sub-highlight {
+  color: #c5a059 !important;
+  font-size: 0.78rem !important;
+  margin-top: 3px !important;
+}
+
+.info-card-footer {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.directions-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0.85rem;
+  background: #c5a059;
+  color: #242f26;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.directions-btn:hover {
+  background: #d4af37;
+  box-shadow: 0 6px 18px rgba(197, 160, 89, 0.35);
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.directions-btn:hover .btn-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Google Map Wrapper */
+.google-map-wrapper {
+  position: relative;
+  min-height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.map-frame-corner {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #c5a059;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.map-frame-corner.top-left {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.map-frame-corner.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 991px) {
+  .map-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-flex-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .google-map-wrapper {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-map-section {
+    padding: 4rem 1.2rem;
+  }
+
+  .location-info-card {
+    padding: 1.8rem 1.5rem;
+  }
+}
