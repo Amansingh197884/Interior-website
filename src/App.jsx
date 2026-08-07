@@ -7,7 +7,9 @@ import About from './components/About';
 import Service from './components/Service';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import Contactpage from './components/Contactpage'; // Naya Standalone Contact Page
+import Location from './components/Location';
+import Contactpage from './components/Contactpage'; 
+import WhyChoose from './components/Whychoose';
 import Footer from './components/Footer';
 
 // Main Landing Page (Jab user '/' par ho)
@@ -16,6 +18,8 @@ const MainPage = () => {
     <>
       <Home />
       <About />
+            <Location/>
+<WhyChoose/>
       <Service />
       <Portfolio />
       <Contact />
